@@ -18,7 +18,7 @@ export const CardInput = ({ handleChange, value, label, name, placeholder, type 
         value={value}
         name={name}
         placeholder={placeholder}
-        className={`border border-solid h-fit rounded-lg ${type === 'color' ? 'h-8 w-8' : 'px-2 py-1'}`}
+        className={`border border-solid h-fit rounded-lg ${type === 'color' ? 'h-[40px] w-[40px] ' : 'px-2 py-1'}`}
       />
     </div>
   )
