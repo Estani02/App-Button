@@ -20,6 +20,29 @@ Button.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    colorDefault: {
+      type: DataTypes.STRING,
+      defaultValue: '#ffffff'
+    },
+    colorHover: {
+      type: DataTypes.STRING,
+      defaultValue: '#ffffff'
+    },
+    colorText: {
+      type: DataTypes.STRING,
+      defaultValue: '#000000'
+    },
+    size: {
+      type: DataTypes.STRING,
+      defaultValue: 'md'
+    },
+    text: {
+      type: DataTypes.STRING
+    },
+    icon: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     clicks: {
       type: DataTypes.INTEGER,
       allowNull: false,
