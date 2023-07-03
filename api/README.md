@@ -1,6 +1,6 @@
 ## BACKEND
 
-### Se usarar postgres para la creacion de la base de datos
+### Se usara postgres para la creación de la base de datos
 - Crear una base de datos llamada buttons
 
 ### 📍Instalar las dependencias
