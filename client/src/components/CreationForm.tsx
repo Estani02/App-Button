@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import api from '../api'
 import { CardInput } from './CardInput'
+import { ButtonStyled } from './ButtonStyled'
 
 interface Props {
   onDataUpdate: (data: any) => void
@@ -44,7 +45,16 @@ export const CreationForm = ({ onDataUpdate }: Props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col items-center gap-4'>
+    <form onSubmit={handleSubmit} className='flex flex-col items-center gap-10'>
+      <ButtonStyled
+        colorDefault={data.colorDefault}
+        colorText={data.colorText}
+        colorHover={data.colorHover}
+        className={`${data.size === 'sm' ? 'py-2 px-4 text-sm' : data.size === 'md' ? 'py-3 px-6 text-md' : 'py-4 px-8 text-lg'} rounded-md w-fit transition-colors duration-300 flex`}
+      >
+        {data.icon && <img src={data.icon} alt={data.name} className="w-5 h-5 mr-2" />}
+        {data.text}
+      </ButtonStyled>
       <div className="flex flex-row items-end gap-10">
         <CardInput
           handleChange={handleChange}
