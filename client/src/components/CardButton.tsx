@@ -1,7 +1,8 @@
 import api from "../api"
 import { Props } from "../interfaces"
+import { ButtonStyled } from "./ButtonStyled"
 
-const Button = ({ data, onDataUpdate }: Props) => {
+const CardButton = ({ data, onDataUpdate }: Props) => {
 
   const handleClick = (id: number) => {
     api.post(`/buttons/${id}/clicks`).then(() => {
@@ -30,18 +31,20 @@ const Button = ({ data, onDataUpdate }: Props) => {
             <span className="text-sm whitespace-nowrap">Número de Cliks</span>
             <span className="text-red-700 uppercase">{button.clicks}</span>
           </div>
-          <button
+          <ButtonStyled
             onClick={() => handleClick(button.id)}
             className={`${button.size === 'sm' ? 'py-2 px-4 text-sm' : button.size === 'md' ? 'py-3 px-6 text-md' : 'py-4 px-8 text-lg'} rounded-md w-fit transition-colors duration-300 flex`}
-            style={{ backgroundColor: button.colorDefault, color: button.colorText }}
+            colorDefault={button.colorDefault}
+            colorText={button.colorText}
+            colorHover={button.colorHover}
           >
             {button.icon && <img src={button.icon} alt={button.name} className="w-5 h-5 mr-2" />}
             {button.text}
-          </button>
+          </ButtonStyled>
         </div>
       ))}
     </div>
   )
 }
 
-export default Button
+export default CardButton

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Button from "./components/Button"
+import CardButton from "./components/CardButton"
 import api from './api'
 import { DataButton } from './interfaces'
 import { CreationForm } from './components/CreationForm'
@@ -29,7 +29,7 @@ function App() {
       </header>
       {error && <p className='text-red-500'>{error}</p>}
       <CreationForm onDataUpdate={setData} />
-      <Button onDataUpdate={setData} data={data} />
+      <CardButton onDataUpdate={setData} data={data} />
     </div>
   )
 }
