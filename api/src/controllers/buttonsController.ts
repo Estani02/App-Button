@@ -57,7 +57,7 @@ export const createButton = async (req: Request, res: Response) => {
   }
 
   if (size != 'sm' && size != 'md' && size != 'lg') {
-    res.status(400).json({ error: 'Size must be sm, md or lg.' })
+    res.status(400).json({ error: 'El tamaño debe ser sm, md o lg.' })
     return
   }
 
@@ -65,7 +65,7 @@ export const createButton = async (req: Request, res: Response) => {
   if (icon) {
     const regex = /^(http|https):\/\//i
     if (!regex.test(icon)) {
-      res.status(400).json({ error: 'Icon must be a valid image URL.' })
+      res.status(400).json({ error: 'El icono debe ser una URL de imagen válida.' })
       return
     }
   }
