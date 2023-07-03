@@ -1,3 +1,6 @@
+# ⚠️IMPORTANTE
+### Una vez clonado el repositorio abrir la carpeta api en ventana distinta a la carpeta client
+
 # L1 - Desafío FULL STACK
 
 ## Objetivo:
